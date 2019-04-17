@@ -1,10 +1,16 @@
 const express = require('express');
 const hbs = require('hbs');
+const bodyParser = require('body-parser');
+const imgpage = require('./imageapi');
+const cardpage = require('./cards');
 const port = process.env.PORT || 8080;
 
 var app = express();
 
 app.set("view engine", "hbs");
+var urlencodedParser = bodyParser.urlencoded({extended: false});
+app.use(bodyParser.json());
+
 
 hbs.registerPartials(__dirname + '/views/partials/');
 app.use(express.static(__dirname, + '/public/'));
@@ -18,6 +24,44 @@ app.get("/", (request, response) => {
 		welcome: 'Hello Heroku!'
 	});
 });
+
+
+app.post('/card_form', urlencodedParser, async (request, response) => {
+    try {
+        let cards = await cardpage.get_cards();
+        response.render('page2.hbs', {
+            output1: cards[0],
+            output2: cards[1],
+            output3: cards[2],
+            output4: cards[3],
+            output5: cards[4],
+        });
+    }catch (e) {
+        response.render('page2.hbs', {
+            output: e
+        });
+    }
+
+});
+
+
+app.post('/image_form', urlencodedParser, async (request, response) => {
+    try {
+        let imagereq = await imgpage.getImages(request.body.picture_input);
+        response.render('page1.hbs', {
+            output1: imgreq[0],
+            output2: imgreq[1]
+
+        });
+    }catch (e) {
+        response.render('page1.hbs', {
+            output: e
+        });
+    }
+
+});
+
+
 
 app.listen(port, () => {
 	console.log(`Server is up on the port ${port}`);

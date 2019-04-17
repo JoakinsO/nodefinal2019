@@ -10,17 +10,18 @@
 </head>
 <body>
 
+
   <h1>{{welcome}}</h1>
 
 
-  <form class="modal-content animate" action="/login_form" method="Get">
+  <form class="modal-content animate" action="/image_form" method="POST">
 
     <div class="container">
-      <h3>Please fill in the country's Name.</h3>
+      <h3>Type the name of the image below.</h3>
       <hr>
 
-      <label for="country"><b>Country Name</b></label>
-      <input type="text" placeholder="Enter country name" name="country" required>
+      <label for="image"><b>Image Name</b></label>
+      <input type="text" placeholder="Enter image name" name="image" required>
     </div>
 
     <div class="container" style="background-color:#563d7c">
@@ -28,18 +29,17 @@
     </div>
   </form>
 <!-- </div> -->
-  <form class="modal-content1 animate" action="/login_form" method="Get">
+  <form class="modal-content1 animate" action="/card_form" method="POST">
 
     <div class="container">
-      <h3>Please fill in a name of a place.</h3>
+      <h3>Please fill in a number.</h3>
       <hr>
 
-      <label for="city"><b>Place Name</b></label>
-      <input type="text" placeholder="Enter place Name" name="city" required>
+      <label for="card"><b>number of cards</b></label>
     </div>
 
     <div class="container" style="background-color:skyblue">
-      <button type="submit">Search</button>
+      <button type="submit">Go</button>
     </div>
   </form>
 
