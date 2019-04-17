@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../public/css/general.css">
+  <link rel="stylesheet" href="../public/page1.css">
+
+  <style>
+@import url('https://fonts.googleapis.com/css?family=Monoton');
+</style>
+
+</head>
+<body>
+
+  <h1>{{welcome}}</h1>
+
+
+  <form class="modal-content animate" action="/login_form" method="Get">
+
+    <div class="container">
+      <h3>Please fill in the contry's Name.</h3>
+      <hr>
+
+      <label for="country"><b>CountryName</b></label>
+      <input type="text" placeholder="Enter country name" name="country" required>
+    </div>
+
+    <div class="container" style="background-color:#563d7c">
+      <button type="submit">Search</button>
+    </div>
+  </form>
+<!-- </div> -->
+
+
+
+<script>
+// Get the modal
+  var modal = document.getElementById('id01');
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+</script>
+
+<br>
+<br>
+<br>
+{{>footer}}
+
+</body>
+</html>
