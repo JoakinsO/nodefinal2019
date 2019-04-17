@@ -14,6 +14,7 @@ hbs.registerHelper('getCurrentYear', () => {
 
 app.get("/", (request, response) => {
 	response.render('input.hbs', {
+		title: "MyPage",
 		welcome: 'Hello Heroku!'
 	});
 });
