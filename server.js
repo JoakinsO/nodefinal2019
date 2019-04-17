@@ -1,6 +1,6 @@
 const express = require('express');
 const hbs = require('hbs');
-const port = process.env.port || 8080;
+const port = process.env.PORT || 8080;
 
 var app = express();
 
