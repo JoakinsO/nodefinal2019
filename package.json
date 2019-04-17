@@ -1,0 +1,24 @@
+{
+  "name": "nodefinal2019",
+  "version": "1.0.0",
+  "description": "Final exam",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoakinsO/nodefinal2019.git"
+  },
+  "author": "Joakins Onyango",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoakinsO/nodefinal2019/issues"
+  },
+  "homepage": "https://github.com/JoakinsO/nodefinal2019#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "hbs": "^4.0.4"
+  }
+}
