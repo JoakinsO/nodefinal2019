@@ -30,11 +30,11 @@ app.post('/card_form', urlencodedParser, async (request, response) => {
     try {
         let cards = await cardpage.get_cards();
         response.render('page2.hbs', {
-            output1: cards[0],
-            output2: cards[1],
-            output3: cards[2],
-            output4: cards[3],
-            output5: cards[4],
+            link1: cards[0],
+            link2: cards[1],
+            link3: cards[2],
+            link4: cards[3],
+            link5: cards[4],
         });
     }catch (e) {
         response.render('page2.hbs', {
