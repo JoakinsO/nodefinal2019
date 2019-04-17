@@ -48,12 +48,19 @@ img.avatar {
  /*Modal Content/Box */
 .modal-content {
   background-color:#563d7c;
-  margin: 5% auto 15% auto;  /*5% from the top, 15% from the bottom and centered */
+  margin: 2.5% auto 5% auto;  /*5% from the top, 15% from the bottom and centered */
   border: 1px solid #888;
   color: #f2f2f2;
   width: 60%; 
 }
 
+.modal-content1 {
+  background-color:lightgreen;
+  margin: 2.5% auto 5% auto;  /*5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  color: black;
+  width: 60%; 
+}
 
 @-webkit-keyframes animatezoom {
   from {-webkit-transform: scale(0)} 

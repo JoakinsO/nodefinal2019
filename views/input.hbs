@@ -18,10 +18,10 @@
   <form class="modal-content animate" action="/login_form" method="Get">
 
     <div class="container">
-      <h3>Please fill in the contry's Name.</h3>
+      <h3>Please fill in the country's Name.</h3>
       <hr>
 
-      <label for="country"><b>CountryName</b></label>
+      <label for="country"><b>Country Name</b></label>
       <input type="text" placeholder="Enter country name" name="country" required>
     </div>
 
@@ -30,7 +30,20 @@
     </div>
   </form>
 <!-- </div> -->
+  <form class="modal-content1 animate" action="/login_form" method="Get">
 
+    <div class="container">
+      <h3>Please fill in a name of a place.</h3>
+      <hr>
+
+      <label for="city"><b>Place Name</b></label>
+      <input type="text" placeholder="Enter place Name" name="city" required>
+    </div>
+
+    <div class="container" style="background-color:lightgreen">
+      <button type="submit">Search</button>
+    </div>
+  </form>
 
 
 <script>
@@ -45,7 +58,6 @@
   }
 </script>
 
-<br>
 <br>
 <br>
 {{>footer}}
