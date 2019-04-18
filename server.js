@@ -28,13 +28,9 @@ app.get("/", (request, response) => {
 
 app.post('/card_form', urlencodedParser, async (request, response) => {
     try {
-        let cards = await cardpage.get_cards();
+        let cards = await cardpage.getCards(request.body.card);
         response.render('page2.hbs', {
-            link1: cards[0],
-            link2: cards[1],
-            link3: cards[2],
-            link4: cards[3],
-            link5: cards[4],
+            objects: cards
         });
     }catch (e) {
         response.render('page2.hbs', {
@@ -47,10 +43,9 @@ app.post('/card_form', urlencodedParser, async (request, response) => {
 
 app.post('/image_form', urlencodedParser, async (request, response) => {
     try {
-        let imagereq = await imgpage.getImages(request.body.picture_input);
+        let imagereq = await imgpage.getImages(request.body.image);
         response.render('page1.hbs', {
-            output1: imgreq[0],
-            output2: imgreq[1]
+            objects: imagereq
 
         });
     }catch (e) {
