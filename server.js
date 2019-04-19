@@ -30,6 +30,8 @@ app.post('/card_form', urlencodedParser, async (request, response) => {
     try {
         let cards = await cardpage.getCards(request.body.card);
         response.render('page2.hbs', {
+            title: "DeckCards",
+            // welcome: `Your randomly picked ${card} are shown below`,
             objects: cards
         });
     }catch (e) {
@@ -45,6 +47,8 @@ app.post('/image_form', urlencodedParser, async (request, response) => {
     try {
         let imagereq = await imgpage.getImages(request.body.image);
         response.render('page1.hbs', {
+            title: "NasaGallery",
+            // welcome: `Welcome to the Nasa Gallery of ${image} pictures`,
             objects: imagereq
 
         });
